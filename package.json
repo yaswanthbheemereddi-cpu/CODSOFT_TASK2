@@ -1,0 +1,26 @@
+{
+  "name": "codsoft-task2-contact-management-api",
+  "version": "1.0.0",
+  "description": "Contact Management System REST API with duplicate prevention, search, sorting, and pagination",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [
+    "codsoft",
+    "backend",
+    "express",
+    "rest-api",
+    "contacts",
+    "sqlite"
+  ],
+  "author": "Bheemereddi Yaswanth Durga Bose",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "morgan": "^1.10.0"
+  }
+}
