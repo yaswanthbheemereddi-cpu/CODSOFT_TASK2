@@ -1,0 +1,61 @@
+{
+  "info": {
+    "name": "CODSOFT Task 2 - Contact Management System API",
+    "description": "Postman Collection for CodSoft Backend Development Internship Task 2",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Contacts (search, filter, pagination)",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3002/api/contacts?page=1&limit=10&search=Yaswanth"
+      }
+    },
+    {
+      "name": "Get Contact By ID",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3002/api/contacts/1"
+      }
+    },
+    {
+      "name": "Create Contact (with duplicate prevention)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Suresh Varma\",\n  \"email\": \"suresh.varma@example.com\",\n  \"phone\": \"+91 9123456780\",\n  \"company\": \"Apex Tech Solutions\",\n  \"job_title\": \"Software Architect\",\n  \"address\": \"Hyderabad, Telangana\",\n  \"category\": \"work\",\n  \"is_favorite\": 1\n}"
+        },
+        "url": "http://localhost:3002/api/contacts"
+      }
+    },
+    {
+      "name": "Update Contact",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"job_title\": \"Principal Software Architect\"\n}"
+        },
+        "url": "http://localhost:3002/api/contacts/1"
+      }
+    },
+    {
+      "name": "Toggle Favorite Status",
+      "request": {
+        "method": "PATCH",
+        "url": "http://localhost:3002/api/contacts/1/favorite"
+      }
+    },
+    {
+      "name": "Delete Contact",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:3002/api/contacts/1"
+      }
+    }
+  ]
+}
